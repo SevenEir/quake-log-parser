@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const ParserFileData = require('./parser/ParserFileData');
+const ParserFileData = require('../lib/ParserFileData');
 
 app.get('/games', (req, res) => {
   fs.readFile('./log/games.log', (error, file) => {
